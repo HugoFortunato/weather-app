@@ -19,11 +19,15 @@ const WeatherProvider = ({ children }: iWeatherProviderProps) => {
     setCardActive(index)
   }
 
+  useEffect(() => {
+    localStorage.setItem('locationValue', process.env.NEXT_PUBLIC_API_KEY)
+  }, [])
+
   async function loadWheater() {
     try {
       const { data } = await weatherApi.get('data', {
         params: {
-          key: process.env.NEXT_PUBLIC_API_KEY,
+          key: localStorage.getItem('locationValue'),
           lang: 'en',
           days: 16,
           city: locationValue
