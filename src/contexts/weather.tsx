@@ -4,7 +4,6 @@ import {
   iDaysData,
   iWeatherContextData
 } from '../types/WheaterApiResponse'
-import Cookies from 'js-cookie'
 import weatherApi from '../api'
 
 const WeatherContext = createContext<iWeatherContextData>(
@@ -20,15 +19,11 @@ const WeatherProvider = ({ children }: iWeatherProviderProps) => {
     setCardActive(index)
   }
 
-  useEffect(() => {
-    Cookies.set('key-weatherbit', '95fb981ce60947528b7f39643eea2e75')
-  }, [])
-
   async function loadWheater() {
     try {
       const { data } = await weatherApi.get('data', {
         params: {
-          key: Cookies.get('key-weatherbit'),
+          key: '95fb981ce60947528b7f39643eea2e75',
           lang: 'en',
           days: 16,
           city: locationValue
