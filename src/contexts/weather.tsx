@@ -21,6 +21,8 @@ const WeatherProvider = ({ children }: iWeatherProviderProps) => {
 
   const apiKey = process.env.NEXT_PUBLIC_API_KEY
 
+  // test
+
   async function loadWheater() {
     try {
       const { data } = await weatherApi.get('data', {
