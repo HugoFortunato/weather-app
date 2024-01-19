@@ -19,15 +19,11 @@ const WeatherProvider = ({ children }: iWeatherProviderProps) => {
     setCardActive(index)
   }
 
-  const apiKey = process.env.NEXT_PUBLIC_API_KEY
-
-  // test
-
   async function loadWheater() {
     try {
       const { data } = await weatherApi.get('data', {
         params: {
-          key: apiKey,
+          key: process.env.NEXT_PUBLIC_API_KEY,
           lang: 'en',
           days: 16,
           city: locationValue
