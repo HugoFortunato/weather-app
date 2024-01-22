@@ -33,4 +33,8 @@ $ yarn or npm
 # Run the project
 $ yarn start or npm start
 # The server will initialize in the <http://localhost:3000>
+
+# Run tests
+$ yarn test or npm start
+# The app will initialize tests
 ```
