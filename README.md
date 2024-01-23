@@ -25,7 +25,7 @@ Before starting, you need to have [Git](https://git-scm.com) and [Node](https://
 
 ```bash
 # Clone this project
-$ git clone https://github.com/Kayke-Fujinaka/Wheather-App
+$ git clone https://github.com/HugoFortunato/weather-app
 # access
 $ cd wheater-app
 # install dependencies
