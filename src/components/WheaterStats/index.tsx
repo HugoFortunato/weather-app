@@ -18,6 +18,7 @@ export const WheaterStats = ({
   wind,
   conditions
 }: iWheaterStatsProps) => {
+  console.log(temperatureCelcius, 'celcius')
   const [isCelsius, setIsCelsius] = useState(true)
   const [temperature, setTemperature] = useState('celsius')
 
@@ -68,7 +69,7 @@ export const WheaterStats = ({
 
           <S.H1>
             {temperature === 'celsius'
-              ? `${Math.floor(temperatureCelcius)}°C`
+              ? `${Math.floor(Number(temperatureCelcius))}°C`
               : `${Math.floor(temperatureFahrenheit)}°F`}
           </S.H1>
         </S.ImageAling>
